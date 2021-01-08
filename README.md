@@ -12,6 +12,8 @@ This script acts as a post-save callback that strips potentially unwanted data f
 * values of HIP and HIPNAME variables (since they are regenerated on startup anyway)
 * timestamps
 
+works only on commercial hip files as non-commercial files have a proprietary cpio block headers.
+
 ### Installation
 just copy the contents of `scripts` folder into your user houdini preferences folder
 * *(on windows)* `C:\Users\<username>\Documents\houdiniXX.Y\scripts` 
