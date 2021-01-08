@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 
 """
@@ -175,10 +176,9 @@ def clean_file(file_in, file_out):
 
 
 def _main():
-    if len(sys.argv) != 3:
+    if len(sys.argv) not in [2, 3]:
         return 2
-    _stt = time.time()
-    return clean_file(sys.argv[1], sys.argv[2])
+    return clean_file(sys.argv[1], sys.argv[-1])
 
 
 if __name__ == '__main__':
