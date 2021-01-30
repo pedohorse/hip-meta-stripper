@@ -10,7 +10,7 @@ def do(kwargs):
     basedir = os.path.dirname(kwargs['file'])
     backupdir = os.path.join(basedir, 'backup')
     skip_backup = False
-    if not os.path.exists:
+    if not os.path.exists(backupdir):
         try:
             os.makedirs(backupdir)
         except:
