@@ -20,11 +20,11 @@ except ImportError:
 print_debug = 0
 
 simple_remaps = {
-    '.variables': [
-        [re.compile(b'set -g HIP = (.*?)$'),            b'set -g HIP = /dev'],
-        [re.compile(b'set -g HIPFILE = (.*?)$'),        b'set -g HIPFILE = /dev/null'],
-        [re.compile(b'set -g POSE = (.*?)$'),           b'set -g POSE = /dev/null'],
-        [re.compile(b'set -g _HIP_SAVETIME = (.*?)$'),  b'set -g _HIP_SAVETIME = \'Fri Aug 29  2:14:00 1997\'']
+    b'.variables': [
+        [re.compile(b'set -g HIP = (.*?)$', re.MULTILINE),            b'set -g HIP = /dev'],
+        [re.compile(b'set -g HIPFILE = (.*?)$', re.MULTILINE),        b'set -g HIPFILE = /dev/null'],
+        [re.compile(b'set -g POSE = (.*?)$', re.MULTILINE),           b'set -g POSE = /dev/null'],
+        [re.compile(b'set -g _HIP_SAVETIME = (.*?)$', re.MULTILINE),  b'set -g _HIP_SAVETIME = \'Fri Aug 29  2:14:00 1997\'']
     ]
 }
 
