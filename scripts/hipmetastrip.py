@@ -113,7 +113,7 @@ def clean_meta(filetext):  # type: (bytes) -> bytes
                 if do_spoof_stat_timestamp:
                     statinner = re.sub(br'(?<=create\s)\s*\d+', spoof_timestamp_bytes10, statinner)
                     statinner = re.sub(br'(?<=modify\s)\s*\d+', spoof_timestamp_bytes10, statinner)
-                statinner = re.sub(br'(?<=author\s)\s*[\w@]+', spoof_userhost, statinner)
+                statinner = re.sub(br'(?<=author\s)\s*[\w@.]+', spoof_userhost, statinner)
                 blocks.append(b'stat\n{%s}' % statinner)
                 total_size += len(blocks[-1])
             elif match.group('sesilic'):
